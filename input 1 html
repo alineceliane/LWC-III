@@ -1,0 +1,37 @@
+<template>
+    <div class="todo">
+
+   
+    <lightning-card>
+        <div class="body">
+
+            <h1 class="title">
+                Calcular IMC 
+            </h1>
+            
+            <div class="slds-p-around_medium">
+                
+                <lightning-input label="Nome" type="text" value={name} onchange={handleChangeNome}></lightning-input> <br>
+                <lightning-input label="Peso (kg)" type="number"  value={peso} onchange={handleChangePeso}></lightning-input> <br>
+                <lightning-input label="Altura (m)" type="decimal"  value={altura} onchange={handleChangeAltura}></lightning-input> <br>
+                
+                <div class="botao1">
+                    <lightning-button label="Calcular IMC" onclick={handleCalculateIMC} class="slds-m-top_medium"></lightning-button>
+                    <template if:true={imc}>
+                        <div class="slds-m-top_medium">
+                            <p>O seu IMC é: {imc}</p>
+                        </div>
+                    </template>
+                </div>
+                
+                <div class="botao2">
+                    <lightning-button icon-name="utility:refresh" variant="bare" alternative-text="Atualizar" onclick={handleRefresh}></lightning-button>
+                    
+                </div>
+                
+                
+            </div>
+        </div>
+        </lightning-card>
+    </div>
+    </template>
