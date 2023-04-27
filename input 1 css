@@ -1,0 +1,16 @@
+.botao1{
+    display: flex;
+    justify-content: center;
+}
+p{
+    margin-left: 10px;
+}
+h1{
+    border-top: 20px;
+    font-size: large;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.body{
+    background:rgba(102, 103, 104, 0.3);
+}
