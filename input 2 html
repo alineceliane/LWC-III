@@ -1,0 +1,25 @@
+<template>
+    <lightning-card title="Component LWC">
+        <div class="slds-p-around_medium">
+            
+            <lightning-input label="Nome" name="nome" onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Sobrenome" type="text"  name="sobrenome" onchange={handleInputChange}></lightning-input>
+            <lightning-input label="Email" type="text"  name="email" onchange={handleInputChange}></lightning-input> 
+            <lightning-input label="Website" type="text"  name="website" onchange={handleInputChange}></lightning-input> 
+            <lightning-input label="Empresa" type="text"  name="empresa" onchange={handleInputChange}></lightning-input> 
+            <lightning-input label="Receita anuel" type="decimal"  name="receita" onchange={handleInputChange} ></lightning-input> <br>
+             <lightning-button label="Enviar" onclick={enviar} class="slds-m-top_medium"></lightning-button> <br>
+             
+            <div  if:true={informacoes}><br>
+                <h1>Suas informações costam abaixo: </h1><br>
+                <p>Nome: {nomes} {sobrenomes} </p> <br>
+                <p>Endereço de email: {emails}</p> <br>
+                <p>Endereço de website: {websites} </p> <br>
+                <p>Valor da Receita Anual: {receitas} </p> <br>
+            </div>
+
+        </div>
+    </lightning-card>
+  
+
+</template>
